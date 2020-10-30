@@ -3,7 +3,8 @@ namespace Entities;
 
 use Entities\Entity;
 
-class Unit extends Entity {
+class Unit extends Entity
+{
     
     public function __construct()
     {

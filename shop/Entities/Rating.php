@@ -3,7 +3,8 @@ namespace Entities;
 
 use Entities\Entity;
 
-class Rating extends Entity {
+class Rating extends Entity
+{
     
     public function __construct()
     {

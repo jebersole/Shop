@@ -5,7 +5,8 @@ use Entities\Snack;
 use Entities\User;
 use Middleware\Auth;
 
-class CartController {
+class CartController
+{
     private $user;
     
     public function __construct()

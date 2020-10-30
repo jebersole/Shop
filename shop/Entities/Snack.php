@@ -3,7 +3,8 @@ namespace Entities;
 
 use Entities\Entity;
 
-class Snack extends Entity {
+class Snack extends Entity
+{
     
     public function __construct()
     {

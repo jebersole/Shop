@@ -3,7 +3,8 @@ namespace Controllers;
 
 use Entities\User;
 
-class UserController {
+class UserController
+{
     
     public function login() 
     {

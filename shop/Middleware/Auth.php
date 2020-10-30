@@ -3,7 +3,8 @@ namespace Middleware;
 
 use Entities\User;
 
-class Auth {
+class Auth
+{
     private $userId;
     
     public function __construct() 

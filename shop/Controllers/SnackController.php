@@ -5,14 +5,17 @@ use Middleware\Auth;
 use Entities\Snack;
 use Entities\Rating;
 
-class SnackController {
+class SnackController
+{
     private $user;
     
-    public function __construct() {
+    public function __construct()
+    {
         $this->user = new Auth();
     }
     
-    public function index() {
+    public function index()
+    {
         $snacks = new Snack();
         $snackPrices = $snacks->getPrices();
         $units = $snacks->getUnitMap();

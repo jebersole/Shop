@@ -4,7 +4,8 @@ namespace Controllers;
 use Entities\Rating;
 use Middleware\Auth;
 
-class RatingController {
+class RatingController
+{
     private $user;
     
     public function __construct()
