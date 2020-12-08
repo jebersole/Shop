@@ -2,7 +2,7 @@
 $rootUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; 
 ?>
 
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/layouts/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/layouts/header.php'); ?>
 
 <div class="container">
     <div class="form-row align-items-center">
@@ -36,4 +36,4 @@ $rootUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 <script src="/static/js/jquery-3.4.1.min.js"></script>
 <script src="/static/js/login.js"></script>
         
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/layouts/footer.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/layouts/footer.php'); ?>

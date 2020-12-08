@@ -17,7 +17,7 @@ class CartController
     public function show()
     {
         if (!$this->user->isAuthorized()) {
-            require $_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/views/login.php';
+            require $_SERVER['DOCUMENT_ROOT'] . '/views/login.php';
             die();
         }
         
@@ -31,13 +31,13 @@ class CartController
             }
         }
         
-        require $_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/views/cart.php';
+        require $_SERVER['DOCUMENT_ROOT'] . '/views/cart.php';
     }
     
     public function update()
     {
         if (!$this->user->isAuthorized()) {
-            require $_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/views/login.php';
+            require $_SERVER['DOCUMENT_ROOT'] . '/views/login.php';
             die();
         }
         if (empty($_POST['id']) || empty($_POST['val'])) {
@@ -61,7 +61,7 @@ class CartController
     public function checkout()
     {
         if (!$this->user->isAuthorized()) {
-            require $_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/views/login.php';
+            require $_SERVER['DOCUMENT_ROOT'] . '/views/login.php';
             die();
         }
         header('Content-Type: application/json');

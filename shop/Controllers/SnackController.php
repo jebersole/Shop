@@ -28,7 +28,7 @@ class SnackController
                 }
             }
         }
-        require $_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/views/index.php';
+        require $_SERVER['DOCUMENT_ROOT'] . '/views/index.php';
     }
     
 }

@@ -2,7 +2,7 @@
 $rootUrl = "http://$_SERVER[HTTP_HOST]";
 ?>
 
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/layouts/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/layouts/header.php'); ?>
 
     <div class="container">
         <div class="card-deck mb-3 text-center" data-url="<?=$rootUrl?>" data-auth="<?=$auth->isAuthorized()?>">
@@ -42,5 +42,5 @@ $rootUrl = "http://$_SERVER[HTTP_HOST]";
 <script src="/static/js/jquery.star-rating-svg.js"></script>
 <script src="/static/js/snacks.js"></script>
                 
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/layouts/footer.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/layouts/footer.php'); ?>
 

@@ -5,26 +5,25 @@ use Controllers\UserController;
 use Controllers\CartController;
 use Controllers\RatingController;
 
-
 $reqUrl = $_SERVER['REQUEST_URI'];
-if (preg_match('/^\/$/', $reqUrl)) {
-    (new SnackController)->index();
-} else if (preg_match('/^\/login$/', $reqUrl)) {
-     (new UserController)->login();
-} else if (preg_match('/^\/logout$/', $reqUrl)) {
-      (new UserController)->logout();
-} else if (preg_match('/^\/cart$/', $reqUrl)) {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-       (new CartController)->update();
-   } else {
-       (new CartController)->show();
-   }
-} else if (preg_match('/^\/checkout$/', $reqUrl)) {
-      (new CartController)->checkout();
-} else if (preg_match('/^\/rating$/', $reqUrl)) {
-    (new RatingController)->rate();
-} else {
-    require $_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/views/404.php';
+
+$routeMap = [
+    '/^\/$/' => ['controller' => SnackController::class, 'view' => 'index'],
+    '/^\/login$/' => ['controller' => UserController::class, 'view' => 'login'],
+    '/^\/logout$/' => ['controller' => UserController::class, 'view' => 'logout'],
+    '/^\/cart$/' => ['controller' => CartController::class, 'view' => $_SERVER['REQUEST_METHOD'] === 'POST' ? 'update' : 'show'],
+    '/^\/checkout$/' => ['controller' => CartController::class, 'view' => 'checkout'],
+    '/^\/rating$/' => ['controller' => RatingController::class, 'view' => 'rate']
+];
+
+foreach ($routeMap as $url => $route) {
+    if (preg_match($url, $reqUrl)) {
+        $dispatch = new $route['controller'];
+        $dispatch->{$route['view']}();
+        exit();
+    }
 }
+
+require $_SERVER['DOCUMENT_ROOT'] . '/views/404.php';
 
 ?>

@@ -3,7 +3,7 @@ $rootUrl = "http://$_SERVER[HTTP_HOST]";
 $total = 0;
 ?>
 
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/layouts/header.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/layouts/header.php'); ?>
 
     <div class="container">
         <?php if (!empty($snacks)) { ?>
@@ -76,5 +76,5 @@ $total = 0;
 <script src="/static/js/jquery-3.4.1.min.js"></script>
 <script src="/static/js/cart.js"></script>
                 
-<?php include($_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/layouts/footer.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'] . '/layouts/footer.php'); ?>
 

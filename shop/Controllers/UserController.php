@@ -41,7 +41,7 @@ class UserController
             header('Content-Type: application/json');
             echo json_encode(['url' => "http://$_SERVER[HTTP_HOST]"]);
         } else {
-            require $_SERVER['DOCUMENT_ROOT'] . '/shop/' . '/views/login.php';
+            require $_SERVER['DOCUMENT_ROOT'] . '/views/login.php';
         }
     }
     
